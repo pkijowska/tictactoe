@@ -5,15 +5,18 @@ background-color: #9ac1e6;
 }
 
 
-table {
 
-margin-left: 150px;
+
+table {
+  text-align: center;
+  margin: 100px auto 0;
+background-color: #eba4d0;
 margin-top: 50px;
 }
 
 td {
-width: 200px;
-height: 200px;
+width: 150px;
+height: 150px;
 border: 3px solid #6F90BE;
 }
 
@@ -33,9 +36,9 @@ border-left: none;
 border-bottom: none;
 }
 
-img1, img2 {
-width: 200px;
-height: 200px;
+#img1, #img2 {
+width: 110px;
+height: 110px;
 }
 #image-one, #dynamic{
 border-radius: 106px;
@@ -53,6 +56,55 @@ background-color: pink;
 .player2{
   display: none;
 }
+
+.draw {
+  display: none;
+}
+
+
+h2 {
+  color: red;
+  size: 24px;
+  text-align: center;
+
+}
+
+h4 {
+text-align: center;
+}
+
+
+/*push the button */
+
+div.container {
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+a {
+  display: inline-block;
+  background-color: #1984c3;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: Courier, sans-serif;
+  padding: 1em 5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border-bottom: 0.25em solid #0f5177;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  box-shadow: 0 2px 3px #ccc;
+  position: relative;
+}
+
+a:hover {
+  background-color: #1e9feb;
+  border-bottom-width: 0;
+  margin-top: 0.2em;
+}
+
 /* .left {
 height: 500px;
 border-left: 5px solid green;
