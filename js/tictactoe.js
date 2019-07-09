@@ -50,6 +50,10 @@ playerOneCombos.push($(this).attr("id"));
   //decideWinner(playerOneCombos)
 } else {
 
+  const img = $('<img id="img2">'); //Equivalent: $(document.createElement('img'))
+  img.attr('src', "https://media0.giphy.com/media/23xN9cYQSKwFy/200w.webp?cid=790b76115d22c4df78505038595e6040&rid=200w.webp");
+  img.appendTo(this);
+
    playerTwoCombos.push($(this).attr("id"));
    console.log('playerTwoCombos', playerTwoCombos);
   playerOne = true;
