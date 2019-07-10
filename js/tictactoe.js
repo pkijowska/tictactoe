@@ -1,6 +1,9 @@
 
-
-
+let score = 0;
+const increment = function() {
+score += 1;
+return score;
+};
 
 
 $(document).ready(function () {
@@ -58,38 +61,37 @@ playerOneCombos.push($(this).attr("id"));
   //console.log('playerTwoCombos', playerTwoCombos);
 }
 
-if ((playerOneCombos.length === 5 && playerTwoCombos.length ===4) ||
-(playerTwoCombos.length === 5 && playerOneCombos.length ===4))
-
- {
-  //.offclick
+// if ((playerOneCombos.length === 3 && playerTwoCombos.length === 2 ) ||
+// (playerOneCombos.length === 2 && playerTwoCombos.length === 3 ))
+//  {
+//   //.offclick
 
   const hedge = timetocheck(playerOneCombos);
   const dog = timetocheck(playerTwoCombos);
-  const dogpoints = 0;
-  const hedgepoints = 0;
+
   //console.log("winner 1");
   if (hedge) {
     console.log("player 1 wins");
     $("h2").removeClass("player1");
-    $("body").addClass("animated flash delay-2s");
+    $(".container").addClass("animated flash delay-2s");
     $("h2").addClass("animated bounceInUp delay-1s");
     //counting points for winning
-    const newdogpoints = dogpoints + 1;
-    console.log(newdogpoints);
-    const newhedge = $("#teamhedge").text();
-    const finalhedge = +newhedge+dogpoints;
-    console.log(finalhedge);
 
-
-
+    //adding the points to the table
+  //  $("#button").click(function() {
+      const getIncreasedValue = increment();
+      $("#teamhedge").text(getIncreasedValue)
+  //  });
   }
+
   if (dog) {
     console.log("player 2 wins");
     $("h2").removeClass("player2");
     //$("table").addClass("animated hinge delay-2s");
     $("h2").addClass("animated bounceInUp delay-1s");
 //counting points for winning
+const getIncreasedValues = increment();
+$("#teamdoggo").text(getIncreasedValues)
   }
 // if (hedge && dog) {
 //   console.log("draw");
@@ -97,25 +99,57 @@ if ((playerOneCombos.length === 5 && playerTwoCombos.length ===4) ||
 //   $("h2").addClass("player2");
 //   $("h2").removeClass("draw");
 // }
+//
+// } else if ((playerOneCombos.length === 4 && playerTwoCombos.length === 3 ) ||
+// (playerOneCombos.length === 3 && playerTwoCombos.length === 3 )) {
+//
+//   if (hedge) {
+//     console.log("player 1 wins");
+//     $("h2").removeClass("player1");
+//     $(".container").addClass("animated flash delay-2s");
+//     $("h2").addClass("animated bounceInUp delay-1s");
+//     //counting points for winning
+//
+//     //adding the points to the table
+//   //  $("#button").click(function() {
+//       var getIncreasedValue = increment();
+//       $("#teamhedge").text(getIncreasedValue)
+//   //  });
+//   }
+//
+//   if (dog) {
+//     console.log("player 2 wins");
+//     $("h2").removeClass("player2");
+//     //$("table").addClass("animated hinge delay-2s");
+//     $("h2").addClass("animated bounceInUp delay-1s");
+//   //counting points for winning
+//   var getIncreasedValue = increment();
+//   $("#teamdog").text(getIncreasedValue)
+//   }
+//
+// }
 
-if (hedge && dog) {
-  console.log("draw");
-  $("h2").removeClass("draw");
-  $("h2").addClass("player1");   ///the code doesn't work with that line
- $("h2").addClass("player2");     ////code doesnt work with that line
+// if (hedge && dog) {
+//   console.log("draw");
+//   $("h2").removeClass("draw");
+//   $("h2").addClass("player1");   ///the code doesn't work with that line
+//  $("h2").addClass("player2");     ////code doesnt work with that line
+// }
+//
+//
+//
+if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
+  if (!hedge && !dog) {
+    console.log("draw");
+    $("h2").removeClass("draw");
+    $(".container").addClass("animated wobble");
+  }
 }
 
 
 
-if (!hedge && !dog) {
-  console.log("draw");
-  $("h2").removeClass("draw");
-  $("body").addClass("animated wobble");
-}
 
 
-
-}
 
 $('#button').click(function() {
     location.reload();
@@ -146,24 +180,21 @@ const timetocheck = function (array) {
   }
 };
 
-// const option1 = ["four", "five", "six"];
-// const option2 = ["seven", "eight", "nine"];
-// const option3 = ["one", "four", "seven"];
-// const option4 = ["two", "five", "eight"];
-// const option5 = ["three", "six", "nine"];
-// const option6 = ["one", "five", "nine"];
-// const option7 = ["three", "five", "seven"];
-// const option8 = ["one", "two", "three"];
+
+//update the score if player won
+
+
+
+
+
 });
 
 
-// // // ||("seven"&"eight"&"nine")
-// // ||("one"&"four"&"seven")
-// // ||("two"&"five"&"eight")
-// // ||("three"&"six"&"nine")
-// // ||("one"&"five"&"nine")
-// // ||("three"&"five"&"seven"))
-// {
-//
-//   console.log("false");
-// }
+
+
+
+//BUTTON ready to add points if you click on reset
+// $("#button").click(function() {
+//   var getIncreasedValue = increment();
+//   $("#teamhedge").text(getIncreasedValue)
+// });

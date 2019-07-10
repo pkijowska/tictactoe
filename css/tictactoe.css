@@ -1,7 +1,12 @@
 
 body {
-background-color: #9ac1e6;
 
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif)
+    center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
 }
 
 
@@ -10,14 +15,14 @@ background-color: #9ac1e6;
 table {
   text-align: center;
   margin: 100px auto 0;
-background-color: #eba4d0;
+background-color: #94bd88;
 margin-top: 50px;
 }
 
 td {
 width: 150px;
 height: 150px;
-border: 3px solid #6F90BE;
+border: 3px solid #73bd5e;
 }
 
 .border-top {
@@ -45,9 +50,7 @@ border-radius: 106px;
 
 }
 
-.pic {
-background-color: pink;
-}
+
 
 .player1{
   display: none;
@@ -71,27 +74,28 @@ h2 {
 
 h4 {
 text-align: center;
+color: #a0cc93;
 }
 
 
 /*push the button */
 
-div.container {
+.container {
   text-align: center;
-  margin: 100px auto 0;
+  margin: 60px auto 0;
 }
 
 a {
   display: inline-block;
-  background-color: #1984c3;
+  background-color: #a0cc93;
   color: #fff;
   font-size: 1.5em;
   font-family: Courier, sans-serif;
-  padding: 1em 5em;
+  padding: 0.7em 2.5em;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 0.5em;
-  border-bottom: 0.25em solid #0f5177;
+  border-radius: 0.4em;
+  border-bottom: 0.2em solid #77b066;
   -moz-transition: 0.1s;
   -webkit-transition: 0.1s;
   transition: 0.1s;
@@ -100,9 +104,24 @@ a {
 }
 
 a:hover {
-  background-color: #1e9feb;
+  background-color: #77b066;
   border-bottom-width: 0;
   margin-top: 0.2em;
+}
+
+
+#hedgehogposition{
+display: inline-block;
+position: fixed;
+    bottom: 50%;
+    left: 75%;
+}
+
+#dogposition {
+display: inline-block;
+position: fixed;
+    bottom: 50%;
+    right: 75%;
 }
 
 /* .left {
