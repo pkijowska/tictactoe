@@ -25,10 +25,24 @@ $(document).ready(function () {
 // console.log(tiles);
 
 
+//modal stuff
+$('.btns').on('click',function(){
+let playerOne =$(this).html();
+
+
+
 let playerOne = true;
 let playerTwo = false;
 let playerOneCombos = [];
 let playerTwoCombos = [];
+
+
+// $("#setTeamHedgehog").on("click", function () {
+// (playerOne)
+// } else {
+//   (playertwo)
+// }
+
 
 $('.box').one("click", function () {
 if (playerOne) {

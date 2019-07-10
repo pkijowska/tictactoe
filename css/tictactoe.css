@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+
 
 body {
 
@@ -10,12 +12,15 @@ background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https:/
 }
 
 
-
+h1{
+font-family: 'Kaushan Script', cursive;
+color: #a0cc93
+}
 
 table {
   text-align: center;
   margin: 100px auto 0;
-background-color: #94bd88;
+
 margin-top: 50px;
 }
 
@@ -83,9 +88,10 @@ color: #a0cc93;
 .container {
   text-align: center;
   margin: 60px auto 0;
+  animation-iteration-count: 2;
 }
 
-a {
+#reset {
   display: inline-block;
   background-color: #a0cc93;
   color: #fff;
@@ -103,7 +109,7 @@ a {
   position: relative;
 }
 
-a:hover {
+#reset:hover {
   background-color: #77b066;
   border-bottom-width: 0;
   margin-top: 0.2em;
@@ -124,6 +130,62 @@ position: fixed;
     right: 75%;
 }
 
+
+#teamPick {
+  background-color: azure;
+  width: 40%;
+  border-radius: 27px;
+  padding-left: 21px;
+
+}
+
+.modal {
+
+  /*  display: none;  /* Hidden by default */ */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #d9d9d9;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+#userpick
+{
+  text-align: center;
+}
+
+#userpick button
+{
+  width: 150px;
+  height: 120px;
+  font-size: 80px;
+  transition: all 0.4s ease 0s;
+
+}
+#userpick button:hover
+{
+  background: #cc6600;
+}
+
+.imgbuttons {
+  width: 150px;
+  height: 120px;
+
+}
 /* .left {
 height: 500px;
 border-left: 5px solid green;
