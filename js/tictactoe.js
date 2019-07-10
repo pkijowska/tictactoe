@@ -1,4 +1,5 @@
 
+
 let score = 0;
 const increment = function() {
 score += 1;
@@ -25,31 +26,16 @@ $(document).ready(function () {
 // console.log(tiles);
 
 
-//modal stuff
-$('.btns').on('click',function(){
-let playerOne =$(this).html();
-
-
-
 let playerOne = true;
 let playerTwo = false;
 let playerOneCombos = [];
 let playerTwoCombos = [];
 
-
-// $("#setTeamHedgehog").on("click", function () {
-// (playerOne)
-// } else {
-//   (playertwo)
-// }
-
-
 $('.box').one("click", function () {
 if (playerOne) {
 
-const img = $('<img id="img1">'); //Equivalent: $(document.createElement('img'))
-img.attr('src', "https://media1.giphy.com/media/3xz2BCohVTd7h2Kvfi/200.webp?cid=790b76115d22c46545414a44552b6e55&rid=200.webp");
-img.appendTo(this);
+const newdiv = $('.move-area').clone();
+$(this).html(newdiv);
 
 
   //console.log($(this).attr("id"));
@@ -163,6 +149,19 @@ if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
 
 
 
+$(".move-area").mousemove(function(event) {
+  var eye = $(".eye");
+  var x = (eye.offset().left) + (eye.width() / 2);
+  var y = (eye.offset().top) + (eye.height() / 2);
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = (rad * (180 / Math.PI) * -1) + 180;
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)'
+  });
+});
 
 
 $('#button').click(function() {
@@ -198,6 +197,19 @@ const timetocheck = function (array) {
 //update the score if player won
 
 
+$(".move-area").mousemove(function(event) {
+  var eye = $(".eye");
+  var x = (eye.offset().left) + (eye.width() / 2);
+  var y = (eye.offset().top) + (eye.height() / 2);
+  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+  var rot = (rad * (180 / Math.PI) * -1) + 180;
+  eye.css({
+    '-webkit-transform': 'rotate(' + rot + 'deg)',
+    '-moz-transform': 'rotate(' + rot + 'deg)',
+    '-ms-transform': 'rotate(' + rot + 'deg)',
+    'transform': 'rotate(' + rot + 'deg)'
+  });
+});
 
 
 
