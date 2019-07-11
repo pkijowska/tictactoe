@@ -44,7 +44,7 @@ td {
 width: 160px;
 height: 160px;
 border: 2px solid #5b924c;
-box-shadow: 0 10px 3px #449a60;
+box-shadow: 0 4px 3px #449a60;
 }
 
 .border-top {
@@ -192,7 +192,7 @@ moving face player 1
   height: 31px;
   width: 31px;
   background: #CCC;
-  left: 12px;
+  left: 1px;
     top: 9px;
 }
 
