@@ -61,12 +61,25 @@ playerOneCombos.push($(this).attr("id"));
   playerOne = false;
   playerTwo = true;
   console.log('playerOneCombos', playerOneCombos);
+
+
+
   //decideWinner(playerOneCombos)
 } else {
 
-  const img = $('<img id="img2">'); //Equivalent: $(document.createElement('img'))
-  img.attr('src', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpspo-w1z4Mpro3XaphOs6Xs8NZKf9SyzPdGWBW2p-alr2ID5oKg");
-  img.appendTo(this);
+
+  const eyeBoxes = $(this).append(`
+    <div class="movingeyes">
+  <div class="player2img">
+
+    <div class='eye2'></div>
+      <div class='eye2'></div>
+
+  </div>
+  `);
+  // const img = $('<img id="img2">'); //Equivalent: $(document.createElement('img'))
+  // img.attr('src', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpspo-w1z4Mpro3XaphOs6Xs8NZKf9SyzPdGWBW2p-alr2ID5oKg");
+  // img.appendTo(this);
 
    playerTwoCombos.push($(this).attr("id"));
    console.log('playerTwoCombos', playerTwoCombos);
@@ -96,6 +109,7 @@ playerOneCombos.push($(this).attr("id"));
   //  $("#button").click(function() {
       const getIncreasedValue = increment();
       $("#teamhedge").text(getIncreasedValue)
+        $("td").off("click");
   //  });
   }
 
@@ -108,6 +122,7 @@ playerOneCombos.push($(this).attr("id"));
 //counting points for winning
 const getIncreasedValues = increment();
 $("#teamdoggo").text(getIncreasedValues)
+$("td").off("click");
   }
 // if (hedge && dog) {
 //   console.log("draw");

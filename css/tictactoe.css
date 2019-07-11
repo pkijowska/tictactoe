@@ -1,14 +1,26 @@
 
+/* https://media2.giphy.com/media/CvdfsUViRUo0g/giphy.gif?cid=790b76115d268f8a61662e74674ab487&rid=giphy.gif */
+
+
+#one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover {
+  -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
+
+}
+
 
 
 body {
 
-/* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif)
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(
+https://media.giphy.com/media/3Z1b8Z5ESU2fgScGab/giphy.gif
+  )
     center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
 }
 
 
@@ -207,7 +219,9 @@ h2{
 }
 
 
-
+/*
+moving face player 1
+*/
 
 .move-area{
   text-align: center;
@@ -236,7 +250,7 @@ h2{
   top: 40px;
   right: 49px;
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 60%;
   height: 30px;
   width: 30px;
   background: #CCC;
@@ -251,4 +265,50 @@ h2{
   border-radius: 50%;
   content: " ";
   background: blue;
+}
+
+/*
+moving face player 2
+*/
+
+
+.player2img {
+    height: 100px;
+    width: 100px;
+    background-color: #c68642;
+    border-radius: 53px;
+    position: relative;
+}
+
+.player2img:after {
+    position: absolute;
+    top: 23px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c"; /* use the hex value here... */
+    font-size: 50px;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+}
+
+.eye2 {
+  position: relative;
+  display: inline-block;
+  border-radius: 40%;
+  height: 30px;
+  width: 30px;
+  background: #CCC;
+}
+
+.eye2:after { /*pupil*/
+  position: absolute;
+  bottom: 17px;
+  right: 16px;
+  width: 10px;
+  height: 10px;
+  border-radius: 30%;
+  content: " ";
+  background: black;
 }
