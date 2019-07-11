@@ -9,7 +9,17 @@ let playerTwo = false;
 let playerOneCombos = [];
 let playerTwoCombos = [];
 
+$(".box").on("click", function() {
+    const audio = $("#audio")[0];
+    audio.play();
+  });
+
 $('.box').one("click", function () {
+
+  // const bleep = new Audio("bleep.mp3");
+
+
+
 if (playerOne) {
 const eyeBox = $(this).append(`
 <div class="move-area">
@@ -19,9 +29,12 @@ const eyeBox = $(this).append(`
     </div>`);
 // $('.move-area').appendTo(this);
 
+
+
+
+
 console.log('eyeBox', eyeBox);
 
-// const bleep = new Audio();
 
 moveeyes();
 
@@ -68,6 +81,8 @@ return score;
     $("h2").removeClass("player1");
     $(".container").addClass("animated flash delay-2s");
       $("table").addClass("tables");
+      const audio1 = $("#audio1")[0];
+      audio1.play();
     // $("h2").addClass("animated bounceInUp delay-1s");
     //counting points for winning
 
@@ -85,6 +100,7 @@ return score;
     //$("table").addClass("animated hinge delay-2s");
     $("body").addClass("animated flash");
       $("table").addClass("tables");
+      audio1.play();
 //counting points for winning
 const getIncreasedValues = increment();
 $("#teamplay2").text(getIncreasedValues)
@@ -98,6 +114,10 @@ if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
     $("h2").removeClass("draw");
     $("table").addClass("tables");
     $(".container").addClass("animated wobble");
+    const audio2 = $("#audio2")[0];
+    audio2.play();
+
+
   }
 }
 
