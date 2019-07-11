@@ -1,4 +1,4 @@
-# Project0 : Tic Tac Toe
+# Project0 Tic Tac Toe
 
 
 
@@ -14,12 +14,11 @@
 
 ## TODO List
 1. An unbeatable AI
-1.
-1.
+1. blabla
 
 ## Technologies
---Made with jquery
---Uses animate css
+- Made with jquery
+- Uses animate css
 
 ## Thank you
 
