@@ -79,10 +79,10 @@ return score;
   if (bub1) {
     console.log("player 1 wins");
     $("h2").removeClass("player1");
-    $(".container").addClass("animated flash delay-2s");
+    $(".container").addClass("animated flash");
       $("table").addClass("tables");
-      const audio1 = $("#audio1")[0];
-      audio1.play();
+      // const audio1 = $("#audio1")[0];
+      // audio1.play();
     // $("h2").addClass("animated bounceInUp delay-1s");
     //counting points for winning
 
@@ -91,6 +91,8 @@ return score;
       const getIncreasedValue = increment();
       $("#teamplay1").text(getIncreasedValue)
         $("td").off("click");
+        const audio1 = $("#audio1")[0];
+        audio1.play();
   //  });
   }
 
@@ -98,13 +100,14 @@ return score;
     console.log("player 2 wins");
     $("h2").removeClass("player2");
     //$("table").addClass("animated hinge delay-2s");
-    $("body").addClass("animated flash");
+    $(".container").addClass("animated flash");
       $("table").addClass("tables");
-      audio1.play();
+
 //counting points for winning
 const getIncreasedValues = increment();
 $("#teamplay2").text(getIncreasedValues)
 $("td").off("click");
+  audio1.play();
   }
 
 
