@@ -2,6 +2,9 @@
 /* https://media2.giphy.com/media/CvdfsUViRUo0g/giphy.gif?cid=790b76115d268f8a61662e74674ab487&rid=giphy.gif */
 
 
+
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+
 #one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover {
   -webkit-transform: scale(1.1);
           -ms-transform: scale(1.1);
@@ -21,6 +24,7 @@ https://media.giphy.com/media/3Z1b8Z5ESU2fgScGab/giphy.gif
   -moz-background-size: cover;
   -ms-background-size: cover;
   background-size: cover;
+
 }
 
 
@@ -98,6 +102,7 @@ color: #a0cc93;
 .container {
   text-align: center;
   margin: 60px auto 0;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 a {
@@ -202,7 +207,7 @@ margin-left:600px;
 
 h1 {
 color: #94bd88;
-font-family: 'Indie Flower', cursive;
+
 }
 
 
@@ -311,4 +316,44 @@ moving face player 2
   border-radius: 30%;
   content: " ";
   background: black;
+}
+
+
+/*
+
+.center-outer {
+display: table;
+width: 100%;
+height: 100%;
+}
+
+.center-inner {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+
+
+
+*/
+.bubbles {
+display: inline-block;
+position: relative;
+}
+
+.bubbles h1 {
+/* position: relative; */
+font-size: 50px;
+margin: 1em 0 0;
+color: #94bd88;
+z-index: 2;
+}
+
+.individual-bubble {
+position: absolute;
+border-radius: 100%;
+bottom: 15px;
+background-color: #94bd88;
+z-index: 1;
 }
