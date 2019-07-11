@@ -2,28 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ATM</title>
+  <title>Tic Tac Toe game</title>
   <link rel="stylesheet" href="css/tictactoe.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script src="js/jquery.js"></script>
   <script src="js/tictactoe.js"></script>
 </head>
-<body class="animated bounceInLeft delay-1s">
-
-
+<body class="animated bounceInLeft">
 
 <div class="container">
-
   <div class="center-outer">
   <div class="center-inner">
 
   <div class="bubbles">
   <h1>Tic Tac Toe</h1>
-  </div>
+</div>
+</div>
+</div>
 
-  </div>
-  </div>
 
+<!-- creating a table which will be the base for my tic tac toe game  -->
 <table>
   <tr>
     <td id="one" class="box border-top border-left"></td>
@@ -42,6 +40,9 @@
   </tr>
 </table>
 
+
+<!-- If player one wins, or player two wins, or there is a draw, show this ->  -->
+
 <div>
 <h2 class="text player2 animated pulse infinite">Player two wins!</h2>
 </div>
@@ -51,29 +52,33 @@
 </div>
 <!-- <h2 class="player2">Player two wins!!</h2> -->
 <div>
-<h2 class="text draw">Draw!</h2>
+<h2 class="text draw animated heartbeat infinite">Draw!</h2>
 </div>
 
+
+<!-- Button added:  -->
 
 <div id="button" class="container">
   <a href="#">Play again</a>
 </div>
 </div>
 
-<div id="hedgehogposition">
+
+<!-- Calculating points for both players:  -->
+<div id="player1position">
 <h4>Player 1: </h4>
-<h4 id="teamhedge"></h4>
+<h4 id="teamplay1"></h4>
 </div>
 
-<div id="dogposition">
+<div id="player2position">
 <h4> Player 2: </h4>
-<h4 id="teamdoggo"></h4>
+<h4 id="teamplay2"></h4>
 </div>
 
 
 
 <!-- <div class="move-area">
-  <!-- <div class='.face1'> -->
+   <div class='.face1'> -->
     <!-- <div class='eye'></div>
     <div class='eye'></div>
     <div class='mouth'></div>
@@ -82,44 +87,7 @@
 
 
 
-<!-- <div class="left animated bounceInLeft delay-3s"> <div/>
-<div class="right animated bounceInRight delay-3s"> <div/>
-<div class="top"> <div/>
-<div class="bottom"> <div/> -->
 
-  <!-- a table with 3 rows <tr> and each row will have 3 columns / cells <td> -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div id="content">
-    <div id="nav">
-      <div id="logo"><img src="img/ga.png" alt="Bank of GA"/></div>
-      <div id="title">Bank of GA</div>
-    </div>
-    <div class="account" id="checking">
-      <h1>Checking</h1>
-      <div class="balance" id="checking-balance">$0</div>
-      <input id="checking-amount" type="text" placeholder="enter an amount" />
-      <input id="checking-deposit" type="button" value="Deposit" />
-      <input id="checking-withdraw" type="button" value="Withdraw" />
-    </div>
-    <div class="account" id="savings">
-      <h1>Savings</h1>
-      <div class="balance" id="savings-balance">$0</div>
-      <input id="savings-amount" type="text" placeholder="enter an amount" />
-      <input id="savings-deposit" type="button" value="Deposit" />
-      <input id="savings-withdraw" type="button" value="Withdraw" />
-    </div>
-    <div class="clear"></div>
-  </div>  -->
 
 </body>
 </html>

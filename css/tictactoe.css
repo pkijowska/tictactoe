@@ -2,7 +2,7 @@
 /* https://media2.giphy.com/media/CvdfsUViRUo0g/giphy.gif?cid=790b76115d268f8a61662e74674ab487&rid=giphy.gif */
 
 
-
+@import url('https://fonts.googleapis.com/css?family=Sniglet:800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
 
 #one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover {
@@ -10,7 +10,6 @@
           -ms-transform: scale(1.1);
           transform: scale(1.1);
           cursor: pointer;
-
 }
 
 
@@ -30,22 +29,21 @@ https://media.giphy.com/media/3Z1b8Z5ESU2fgScGab/giphy.gif
 
 
 .tables {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 table {
-
-  text-align: center;
-  margin: 100px auto 0;
+/* text-align: center; */
+margin: 100px auto 0;
 background-color: #94bd88;
-margin-top: 50px;
+margin-top: 10px;
 }
 
 td {
-width: 120px;
-height: 120px;
-border: 3px solid #73bd5e;
-box-shadow: 0 10px 3px #ccc;
+width: 160px;
+height: 160px;
+border: 5px solid #73bd5e;
+box-shadow: 0 10px 3px #4dff88;
 }
 
 .border-top {
@@ -62,14 +60,6 @@ border-left: none;
 
 .border-bottom {
 border-bottom: none;
-}
-
-#img1, #img2 {
-width: 110px;
-height: 110px;
-}
-#image-one, #dynamic{
-border-radius: 106px;
 }
 
 .player1{
@@ -93,8 +83,10 @@ border-radius: 106px;
 } */
 
 h4 {
-text-align: center;
+/* text-align: center; */
 color: #a0cc93;
+font-family: 'Luckiest Guy', cursive;
+font-weight: bold;
 }
 
 
@@ -102,7 +94,7 @@ color: #a0cc93;
 
 .container {
   text-align: center;
-  margin: 60px auto 0;
+  /* margin: 60px auto 0; */
   font-family: 'Luckiest Guy', cursive;
 }
 
@@ -111,7 +103,7 @@ a {
   background-color: #a0cc93;
   color: #fff;
   font-size: 1em;
-  font-family: Courier, sans-serif;
+  font-family: 'Luckiest Guy', cursive;
   padding: 0.5em 1.7em;
   text-decoration: none;
   text-transform: uppercase;
@@ -122,6 +114,7 @@ a {
   transition: 0.1s;
   box-shadow: 0 2px 3px #ccc;
   position: relative;
+  top: 30px;
 }
 
 a:hover {
@@ -131,80 +124,21 @@ a:hover {
 }
 
 
-#hedgehogposition{
+#player1position{
 display: inline-block;
 position: fixed;
+
     bottom: 50%;
-    left: 75%;
+    right: 81%;
 }
 
-#dogposition {
+#player2position {
 display: inline-block;
 position: fixed;
-    bottom: 50%;
-    right: 75%;
+bottom: 50%;
+left: 82%;
 }
 
-/* .left {
-height: 500px;
-border-left: 5px solid green;
-margin-left: 200px
-}
-.right {
-height: 500px;
-border-left: 5px solid green;
-margin-left:600px;
-} */
-
-
-
-/* .top {
-height: 500px;
-border-left: 5px solid green;
-margin-left:600px;
-} */
-
-
-/* @import url(http://fonts.googleapis.com/css?family=Oleo+Script);
-@import url(http://fonts.googleapis.com/css?family=Ruluko);
-#content {
-  margin: 0 auto;
-  text-align: center;
-  width: 700px;
-}
-#nav {
-  margin: 50px 0px;
-}
-#title {
-  color: #F52F4F;
-  font-family: 'Oleo Script', cursive;
-  font-size: 50px;
-}
-#checking {
-  float: left;
-}
-#savings {
-  float: right;
-}
-.account {
-  background-color: #6C9A74;
-  border: 1px solid #295A33;
-  padding: 10px;
-}
-.balance {
-  background-color: #E3E3E3;
-  border: 1px solid #676767;
-  font-family: 'Ruluko', sans-serif;
-  font-size: 50px;
-  padding: 25px 0;
-}
-.clear {
-  clear: both;
-}
-.zero {
-  background-color: #F52F4F;
-  color: #FFF;
-} */
 
 h1 {
 color: #94bd88;
@@ -222,6 +156,8 @@ h2{
   font-family: 'Indie Flower', cursive;
   font-size: 40px;
   color: red;
+  font-weight: bold;
+
 }
 
 
@@ -236,19 +172,31 @@ moving face player 1
   border-radius: 50px;
   border: 2px solid #eebb99;
   background-color: #eebb99;
+  margin-left: 30px;
   /* padding: 10% 45%; */
 }
-.container {
-  width: 100%;
+
+.move2{
+  /* text-align: center; */
+  margin-left: 22px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid #c68642;
+  background-color: #c68642;
+  /* padding: 10% 45%; */
 }
-.eye {
+
+
+.eye, .eye2 {
   position: relative;
   display: inline-block;
   border-radius: 50%;
   height: 30px;
   width: 30px;
   background: #CCC;
-
+  left: 12px;
+    top: 5px;
 }
 
 .mouth {
@@ -256,10 +204,27 @@ moving face player 1
   top: 40px;
   right: 49px;
   display: inline-block;
-  border-radius: 60%;
+  border-radius: 50%;
   height: 30px;
   width: 30px;
   background: #CCC;
+}
+
+.mouth2 {
+  position: relative;
+  top: 45px;
+  right: 49px;
+  display: inline-block;
+  /* border-radius: 60%; */
+  height: 30px;
+  width: 30px;
+font-family: 'Sniglet', cursive;
+   background: #c68642;
+   color:red;
+   font-size: 2em;
+   font-weight: bold;
+   text-align: center;
+   border-radius: 5px;
 }
 
 .eye:after { /*pupil*/
@@ -273,11 +238,22 @@ moving face player 1
   background: blue;
 }
 
+.eye2:after { /*pupil*/
+  position: absolute;
+  bottom: 17px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  content: " ";
+  background: black;
+}
+
 /*
 moving face player 2
 */
 
-
+/*
 .player2img {
     height: 100px;
     width: 100px;
@@ -293,7 +269,7 @@ moving face player 2
     left: 0;
     right: 0;
     content: "\274c"; /* use the hex value here... */
-    font-size: 50px;
+  /*  font-size: 50px;
     color: #FFF;
     line-height: 100px;
     text-align: center;
@@ -307,9 +283,9 @@ moving face player 2
   width: 30px;
   background: #CCC;
 }
-
+/*
 .eye2:after { /*pupil*/
-  position: absolute;
+/*  position: absolute;
   bottom: 17px;
   right: 16px;
   width: 10px;
@@ -318,7 +294,7 @@ moving face player 2
   content: " ";
   background: black;
 }
-
+*/
 
 /*
 
@@ -343,9 +319,9 @@ display: inline-block;
 position: relative;
 }
 
-.bubbles h1 {
-/* position: relative; */
-font-size: 60px;
+.bubbles h1{
+position: relative;
+font-size: 50px;
 margin: 1em 0 0;
 color: #94bd88;
 z-index: 2;
@@ -357,4 +333,16 @@ border-radius: 100%;
 bottom: 15px;
 background-color: #94bd88;
 z-index: 1;
+}
+
+#teamplay1 {
+  position: relative;
+  left: 17px;
+
+}
+
+#teamplay2 {
+position: relative;
+left: 30px;
+
 }
