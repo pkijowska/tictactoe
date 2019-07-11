@@ -81,6 +81,10 @@ return score;
     $("h2").removeClass("player1");
     $(".container").addClass("animated flash");
       $("table").addClass("tables");
+    $(".move-area").addClass("animated flip infinite delay-2s")
+
+;
+
       // const audio1 = $("#audio1")[0];
       // audio1.play();
     // $("h2").addClass("animated bounceInUp delay-1s");
@@ -102,6 +106,7 @@ return score;
     //$("table").addClass("animated hinge delay-2s");
     $(".container").addClass("animated flash");
       $("table").addClass("tables");
+$(".move2").addClass("animated flip infinite delay-2s")
 
 //counting points for winning
 const getIncreasedValues = increment();
@@ -117,6 +122,8 @@ if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
     $("h2").removeClass("draw");
     $("table").addClass("tables");
     $(".container").addClass("animated wobble");
+    $(".move2").addClass("animated rubberBand infinite delay-2s")
+    $(".move-area").addClass("animated rubberBand infinite delay-2s")
     const audio2 = $("#audio2")[0];
     audio2.play();
 
@@ -211,7 +218,7 @@ function moveeyes2 () {
 // Define a blank array for the effect positions. This will be populated based on width of the title.
    var bArray = [];
    // Define a size array, this will be used to vary bubble sizes
-   var sArray = [4,6,12,16];
+   var sArray = [1,2,3,4,6,8,12,16,19,23];
 
    // Push the header width values to bArray
    for (var i = 0; i < $('.bubbles').width(); i++) {
