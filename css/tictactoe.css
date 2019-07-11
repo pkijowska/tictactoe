@@ -12,9 +12,12 @@ body {
 }
 
 
-
+.tables {
+  opacity: 0.6;
+}
 
 table {
+
   text-align: center;
   margin: 100px auto 0;
 background-color: #94bd88;
@@ -25,6 +28,7 @@ td {
 width: 120px;
 height: 120px;
 border: 3px solid #73bd5e;
+box-shadow: 0 10px 3px #ccc;
 }
 
 .border-top {
@@ -49,10 +53,7 @@ height: 110px;
 }
 #image-one, #dynamic{
 border-radius: 106px;
-
 }
-
-
 
 .player1{
   display: none;
@@ -67,12 +68,12 @@ border-radius: 106px;
 }
 
 
-h2 {
+/* h2 {
   color: red;
   size: 24px;
   text-align: center;
 
-}
+} */
 
 h4 {
 text-align: center;
@@ -187,10 +188,35 @@ margin-left:600px;
   color: #FFF;
 } */
 
+h1 {
+color: #94bd88;
+font-family: 'Indie Flower', cursive;
+}
+
+
+h2{
+  position:fixed;
+  top:43%;
+  margin:0 auto;
+  left:0;right:0;
+  text-align:center;
+  cursor:default;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+  color: red;
+}
+
+
+
+
 .move-area{
-  width: 150px;
-  height: 150px;
-  padding: 10% 45%;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid #eebb99;
+  background-color: #eebb99;
+  /* padding: 10% 45%; */
 }
 .container {
   width: 100%;

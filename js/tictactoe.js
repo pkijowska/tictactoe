@@ -33,10 +33,24 @@ let playerTwoCombos = [];
 
 $('.box').one("click", function () {
 if (playerOne) {
-
-const newdiv = $('.move-area').clone();
-$(this).html(newdiv);
-
+// const div = $(".move-area");
+// console.log('div', div);
+const eyeBox = $(this).append(`
+<div class="move-area">
+    <div class='eye'></div>
+    <div class='eye'></div>
+    <div class='mouth'></div>
+    </div>
+`);
+// $('.move-area').appendTo(this);
+//$(this).html($('.move-area'));
+console.log($('.move-area'));
+//console.log('.face1');
+console.log(this);
+// $(this).html(newdiv);
+// $(this).html(newdiv);
+moveeyes();
+// })
 
   //console.log($(this).attr("id"));
 
@@ -74,7 +88,8 @@ playerOneCombos.push($(this).attr("id"));
     console.log("player 1 wins");
     $("h2").removeClass("player1");
     $(".container").addClass("animated flash delay-2s");
-    $("h2").addClass("animated bounceInUp delay-1s");
+      $("table").addClass("tables");
+    // $("h2").addClass("animated bounceInUp delay-1s");
     //counting points for winning
 
     //adding the points to the table
@@ -88,7 +103,8 @@ playerOneCombos.push($(this).attr("id"));
     console.log("player 2 wins");
     $("h2").removeClass("player2");
     //$("table").addClass("animated hinge delay-2s");
-    $("h2").addClass("animated bounceInUp delay-1s");
+    $("body").addClass("animated flash");
+      $("table").addClass("tables");
 //counting points for winning
 const getIncreasedValues = increment();
 $("#teamdoggo").text(getIncreasedValues)
@@ -142,6 +158,7 @@ if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
   if (!hedge && !dog) {
     console.log("draw");
     $("h2").removeClass("draw");
+    $("table").addClass("tables");
     $(".container").addClass("animated wobble");
   }
 }
@@ -149,19 +166,19 @@ if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
 
 
 
-$(".move-area").mousemove(function(event) {
-  var eye = $(".eye");
-  var x = (eye.offset().left) + (eye.width() / 2);
-  var y = (eye.offset().top) + (eye.height() / 2);
-  var rad = Math.atan2(event.pageX - x, event.pageY - y);
-  var rot = (rad * (180 / Math.PI) * -1) + 180;
-  eye.css({
-    '-webkit-transform': 'rotate(' + rot + 'deg)',
-    '-moz-transform': 'rotate(' + rot + 'deg)',
-    '-ms-transform': 'rotate(' + rot + 'deg)',
-    'transform': 'rotate(' + rot + 'deg)'
-  });
-});
+// $(".move-area").mousemove(function(event) {
+//   var eye = $(".eye");
+//   var x = (eye.offset().left) + (eye.width() / 2);
+//   var y = (eye.offset().top) + (eye.height() / 2);
+//   var rad = Math.atan2(event.pageX - x, event.pageY - y);
+//   var rot = (rad * (180 / Math.PI) * -1) + 180;
+//   eye.css({
+//     '-webkit-transform': 'rotate(' + rot + 'deg)',
+//     '-moz-transform': 'rotate(' + rot + 'deg)',
+//     '-ms-transform': 'rotate(' + rot + 'deg)',
+//     'transform': 'rotate(' + rot + 'deg)'
+//   });
+// });
 
 
 $('#button').click(function() {
@@ -194,22 +211,32 @@ const timetocheck = function (array) {
 };
 
 
+
 //update the score if player won
+function moveeyes () {
+  const eyeBoxArray = $(".move-area");
 
+  eyeBoxArray.each(moveEyes);
 
-$(".move-area").mousemove(function(event) {
-  var eye = $(".eye");
-  var x = (eye.offset().left) + (eye.width() / 2);
-  var y = (eye.offset().top) + (eye.height() / 2);
-  var rad = Math.atan2(event.pageX - x, event.pageY - y);
-  var rot = (rad * (180 / Math.PI) * -1) + 180;
-  eye.css({
-    '-webkit-transform': 'rotate(' + rot + 'deg)',
-    '-moz-transform': 'rotate(' + rot + 'deg)',
-    '-ms-transform': 'rotate(' + rot + 'deg)',
-    'transform': 'rotate(' + rot + 'deg)'
-  });
-});
+  function moveEyes () {
+
+    $(this).mousemove(function(event) {
+      var eye = $(".eye");
+      var x = (eye.offset().left) + (eye.width() / 2);
+      var y = (eye.offset().top) + (eye.height() / 2);
+      var rad = Math.atan2(event.pageX - x, event.pageY - y);
+      var rot = (rad * (180 / Math.PI) * -1) + 180;
+      eye.css({
+        '-webkit-transform': 'rotate(' + rot + 'deg)',
+        '-moz-transform': 'rotate(' + rot + 'deg)',
+        '-ms-transform': 'rotate(' + rot + 'deg)',
+        'transform': 'rotate(' + rot + 'deg)'
+      });
+    });
+  }
+}
+
+moveeyes();
 
 
 
