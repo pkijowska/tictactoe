@@ -29,7 +29,7 @@ https://media.giphy.com/media/3Z1b8Z5ESU2fgScGab/giphy.gif
 
 
 .tables {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 table {
@@ -43,7 +43,7 @@ margin-top: 10px;
 td {
 width: 160px;
 height: 160px;
-border: 5px solid #5b924c;
+border: 2px solid #5b924c;
 box-shadow: 0 10px 3px #449a60;
 }
 

@@ -112,7 +112,7 @@ $(".move2").addClass("animated flip infinite delay-2s")
 const getIncreasedValues = increment();
 $("#teamplay2").text(getIncreasedValues)
 $("td").off("click");
-  audio1.play();
+  audio3.play();
   }
 
 
