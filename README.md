@@ -5,11 +5,15 @@ Play the classic Tic Tac Toe game!
 This game is FULL of css effects that make the page look really cool.
 
 
+[Click here to access the game!]( https://pkijowska.github.io/tictactoe/)
+
 ![alt text](tictactoe.png)
 
-![Repo img](/tictactoe/tictactoe.png)
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+
+<!-- ![Repo img](/tictactoe/tictactoe.png)
+
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title") -->
 
 ## Features
 
@@ -27,7 +31,8 @@ None I am aware of.
 
 ## Technologies
 - Made with jquery, javascript, css
-- Uses animate css
+- Used animate css
+- Used sounds
 
 
 ## Thank you
