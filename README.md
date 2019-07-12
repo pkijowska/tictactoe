@@ -5,6 +5,11 @@ Play the classic Tic Tac Toe game!
 This game is FULL of css effects that make the page look really cool.
 
 
+![alt text](tictactoe.png)
+
+![Repo img](/tictactoe/tictactoe.png)
+
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
 ## Features
 

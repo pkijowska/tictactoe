@@ -4,10 +4,19 @@
 
 $(document).ready(function () {
 
+
+
 let playerOne = true;
 let playerTwo = false;
 let playerOneCombos = [];
 let playerTwoCombos = [];
+
+
+$("h4").on("click", function() {
+const audio0 = $("#audio0")[0];
+audio0.play();
+  });
+
 
 $(".box").on("click", function() {
     const audio = $("#audio")[0];
