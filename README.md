@@ -38,4 +38,5 @@ None I am aware of.
 ## Thank you
 
 1. Rashida for helping me several times when I got stuck
+1. Joel for all the teaching so far!
 1. Lucy for making the eyes work   (◔_◔)
