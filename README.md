@@ -2,7 +2,7 @@
 
 Play the classic Tic Tac Toe game! And do not forget to put the volume up!
 
-- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `This game is FULL of css effects`
+![#c5f015]`This game is FULL of css effects`
 
 
 [Click here to access the game!]( https://pkijowska.github.io/tictactoe/)
@@ -18,6 +18,7 @@ Each part of the game will have a different effects:
 1. In case of the draw - all the bubbles will start bounce.
 ![alt text](draw.png)
 There are bubbles coming out of the tic tac toe text (made in javascript)
+![alt text](bubbles.png)
 
 ## Bugs
 None I am aware of.
