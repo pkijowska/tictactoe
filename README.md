@@ -3,7 +3,7 @@
 Play the classic Tic Tac Toe game! And do not forget to put the volume up!
 
 ```diff
-text in green `This game is FULL of css effects`
+- ![#c5f015](https://placehold.it/15/c5f015/000000?This+game is FULL of css effects=+) 
 ```
 
 [Click here to access the game!]( https://pkijowska.github.io/tictactoe/)
