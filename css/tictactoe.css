@@ -99,8 +99,7 @@ font-weight: bold;
   letter-spacing: 9px;
   font-family: 'Luckiest Guy', cursive;
 }
-
-a {
+.play-again{
   display: inline-block;
   background-color: #a0cc93;
   color: #fff;
@@ -119,7 +118,7 @@ a {
   top: 30px;
 }
 
-a:hover {
+.play-again:hover {
   background-color: #77b066;
   border-bottom-width: 0;
   margin-top: 0.2em;
@@ -344,4 +343,8 @@ z-index: 1;
 position: relative;
 left: 30px;
 
+}
+
+svg{
+  transform: rotate(270deg);
 }
