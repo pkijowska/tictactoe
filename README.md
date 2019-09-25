@@ -1,8 +1,8 @@
-# Project0 Tic Tac Toe
+# Project0 Tic Tac Toe - 3 day deadline project
 
-Play the classic Tic Tac Toe game!
+Play the classic Tic Tac Toe game! And do not forget to put the volume up!
 
-This game is FULL of css effects that make the page look really cool.
+- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `This game is FULL of css effects`
 
 
 [Click here to access the game!]( https://pkijowska.github.io/tictactoe/)
@@ -10,15 +10,14 @@ This game is FULL of css effects that make the page look really cool.
 ![alt text](tictactoe.png)
 
 
-
-<!-- ![Repo img](/tictactoe/tictactoe.png)
-
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title") -->
-
 ## Features
 
-
-
+Each part of the game will have a different effects:
+1. If the player 2 wins the bubbles will start turning around.
+![alt text](win2.png)
+1. In case of the draw - all the bubbles will start bounce.
+![alt text](draw.png)
+There are bubbles coming out of the tic tac toe text (made in javascript)
 
 ## Bugs
 None I am aware of.
@@ -29,14 +28,14 @@ None I am aware of.
 1. Make a module that will enable players to pick the the bubble they want to be
 
 
+
 ## Technologies
 - Made with jquery, javascript, css
 - Used animate css
-- Used sounds
+- Used sounds effects
 
 
 ## Thank you
 
-1. Rashida for helping me several times when I got stuck
-1. Joel for all the teaching so far!
+1. Rashida & Joel for helping me several times when I got stuck
 1. Lucy for making the eyes work   (◔_◔)
