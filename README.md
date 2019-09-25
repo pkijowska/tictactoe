@@ -2,8 +2,9 @@
 
 Play the classic Tic Tac Toe game! And do not forget to put the volume up!
 
-![#c5f015]`This game is FULL of css effects`
-
+```diff
+text in green `This game is FULL of css effects`
+```
 
 [Click here to access the game!]( https://pkijowska.github.io/tictactoe/)
 
