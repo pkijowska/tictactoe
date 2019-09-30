@@ -1,170 +1,126 @@
 
-
-
-
 $(document).ready(function () {
 
+        let playerOne = true;
+        let playerTwo = false;
+        let playerOneCombos = [];
+        let playerTwoCombos = [];
 
 
-let playerOne = true;
-let playerTwo = false;
-let playerOneCombos = [];
-let playerTwoCombos = [];
+        $("h4").on("click", function() {
+        const audio0 = $("#audio0")[0];
+        audio0.play();
+          });
 
+        $(".box").on("click", function() {
+            const audio = $("#audio")[0];
+            audio.play();
+          });
 
-$("h4").on("click", function() {
-const audio0 = $("#audio0")[0];
-audio0.play();
-  });
+          $('.box').one("click", function () {
+            if (playerOne) {
+                        const eyeBox = $(this).append(`
+                        <div class="move-area">
+                            <div class='eye'></div>
+                            <div class='eye'></div>
+                            <div class='mouth'></div>
+                            </div>`);
 
+                            moveeyes();
+                            playerOneCombos.push($(this).attr("id"));
+                            playerOne = false;
+                            playerTwo = true;
 
-$(".box").on("click", function() {
-    const audio = $("#audio")[0];
-    audio.play();
-  });
+                              } else {
 
-$('.box').one("click", function () {
+                      const eyeBoxes = $(this).append(`
+                        <div class="move2">
+                            <div class='eye2'></div>
+                            <div class='eye2'></div>
+                            <div class='mouth2'>X</div>
+                            </div>`);
 
-  // const bleep = new Audio("bleep.mp3");
+                            moveeyes2();
 
+                            playerTwoCombos.push($(this).attr("id"));
+                            playerOne = true;
+                            playerTwo = false;
+                }
 
-
-if (playerOne) {
-const eyeBox = $(this).append(`
-<div class="move-area">
-    <div class='eye'></div>
-    <div class='eye'></div>
-    <div class='mouth'></div>
-    </div>`);
-// $('.move-area').appendTo(this);
-
-
-
-
-
-console.log('eyeBox', eyeBox);
-
-
-moveeyes();
-
-playerOneCombos.push($(this).attr("id"));
-
-
-  playerOne = false;
-  playerTwo = true;
-
-
-} else {
-
-
-  const eyeBoxes = $(this).append(`
-    <div class="move2">
-        <div class='eye2'></div>
-        <div class='eye2'></div>
-        <div class='mouth2'>X</div>
-        </div>
-  `);
-
-  console.log('eyeBoxes', eyeBoxes);
-  moveeyes2();
-
-   playerTwoCombos.push($(this).attr("id"));
-  playerOne = true;
-  playerTwo = false;
-
-}
-
-
-let score = 0;
-const increment = function() {
-score += 1;
-return score;
-};
-
+////////////////////////calculate the score/////////////////////////////////////
+                    let score = 0;
+                    const increment = function() {
+                    score += 1;
+                    return score;
+                    };
+/////////////////////check who won/////////////////////////////////////////////
   const bub1 = timetocheck(playerOneCombos);
   const bub2 = timetocheck(playerTwoCombos);
 
-  //console.log("winner 1");
+////////////////////add css effects if bub1 won//////////////////////////
   if (bub1) {
-    console.log("player 1 wins");
-    $("h2").removeClass("player1");
-    $(".container").addClass("animated flash");
-      $("table").addClass("tables");
-    $(".move-area").addClass("animated flip infinite delay-2s")
+          $("h2").removeClass("player1");
+          $(".container").addClass("animated flash");
+            $("table").addClass("tables");
+          $(".move-area").addClass("animated flip infinite delay-2s");
 
-;
-
-      // const audio1 = $("#audio1")[0];
-      // audio1.play();
-    // $("h2").addClass("animated bounceInUp delay-1s");
-    //counting points for winning
-
-    //adding the points to the table
-  //  $("#button").click(function() {
       const getIncreasedValue = increment();
       $("#teamplay1").text(getIncreasedValue)
         $("td").off("click");
         const audio1 = $("#audio1")[0];
         audio1.play();
-  //  });
-  }
+      }
 
   if (bub2) {
     console.log("player 2 wins");
     $("h2").removeClass("player2");
-    //$("table").addClass("animated hinge delay-2s");
     $(".container").addClass("animated flash");
       $("table").addClass("tables");
-$(".move2").addClass("animated flip infinite delay-2s")
+      $(".move2").addClass("animated flip infinite delay-2s")
 
-//counting points for winning
-const getIncreasedValues = increment();
-$("#teamplay2").text(getIncreasedValues)
-$("td").off("click");
-  audio3.play();
-  }
-
-
-if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
-  if (!bub1 && !bub2) {
-    console.log("draw");
-    $("h2").removeClass("draw");
-    $("table").addClass("tables");
-    $(".container").addClass("animated wobble");
-    $(".move2").addClass("animated rubberBand infinite delay-2s")
-    $(".move-area").addClass("animated rubberBand infinite delay-2s")
-    const audio2 = $("#audio2")[0];
-    audio2.play();
+        //counting points for winning
+        const getIncreasedValues = increment();
+        $("#teamplay2").text(getIncreasedValues)
+        $("td").off("click");
+          audio3.play();
+          }
 
 
-  }
-}
+        if (playerOneCombos.length === 5 && playerTwoCombos.length === 4 ) {
+              if (!bub1 && !bub2) {
+                console.log("draw");
+                $("h2").removeClass("draw");
+                $("table").addClass("tables");
+                $(".container").addClass("animated wobble");
+                $(".move2").addClass("animated rubberBand infinite delay-2s")
+                $(".move-area").addClass("animated rubberBand infinite delay-2s")
+                const audio2 = $("#audio2")[0];
+                audio2.play();
 
 
+              }
+        }
 
-
-
-
-//reloading the page button
-$('#button').click(function() {
-    location.reload();
-});
+        //reloading the page button
+        $('#button').click(function() {
+            location.reload();
+        });
 
 });
 
-//all options to win
-const timetocheck = function (array) {
-  if ( (array.includes("one") && array.includes("two") && array.includes("three")) ||
-  (array.includes("four") && array.includes("five") && array.includes("six")) ||
-  (array.includes("seven") && array.includes("eight") && array.includes("nine")) ||
-  (array.includes("one") && array.includes("four") && array.includes("seven")) ||
-  (array.includes("two") && array.includes("five") && array.includes("eight")) ||
-  (array.includes("three") && array.includes("six") && array.includes("nine")) ||
-  (array.includes("one") && array.includes("five") && array.includes("nine")) ||
-  (array.includes("three") && array.includes("five") && array.includes("seven")) ) {
-    return true;
-  }
-};
+          //all options to win
+          const timetocheck = function (array) {
+            if ( (array.includes("one") && array.includes("two") && array.includes("three")) ||
+            (array.includes("four") && array.includes("five") && array.includes("six")) ||
+            (array.includes("seven") && array.includes("eight") && array.includes("nine")) ||
+            (array.includes("one") && array.includes("four") && array.includes("seven")) ||
+            (array.includes("two") && array.includes("five") && array.includes("eight")) ||
+            (array.includes("three") && array.includes("six") && array.includes("nine")) ||
+            (array.includes("one") && array.includes("five") && array.includes("nine")) ||
+            (array.includes("three") && array.includes("five") && array.includes("seven")) ) {
+              return true;
+            }
+          };
 
 
 
@@ -218,10 +174,6 @@ function moveeyes2 () {
   };
 
 };
-
-//moveeyes();
-
-
 
 
 // Define a blank array for the effect positions. This will be populated based on width of the title.

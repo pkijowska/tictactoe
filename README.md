@@ -1,4 +1,4 @@
-# Project0 Tic Tac Toe - 3 day deadline project
+# Project0 Tic Tac Toe - Made in less than 4 days!
 
 Play the classic Tic Tac Toe game! And do not forget to put the volume up!
 
@@ -22,7 +22,7 @@ There are bubbles coming out of the tic tac toe text (made in javascript)
 ![alt text](bubbles.png)
 
 ## Bugs
-None I am aware of.
+Not fully mobile friendly :( Definitely need to change that.
 
 ## TODO List
 1. An unbeatable AI
@@ -34,10 +34,11 @@ None I am aware of.
 ## Technologies
 - Made with jquery, javascript, css
 - Used animate css
-- Used sounds effects
+- Used sounds effects (different sound effects depending on who wins)
 
 
 ## Thank you
 
 1. Rashida & Joel for helping me several times when I got stuck
+1. Taryn Ewens. After her presentation at GA I got inspired to use moving eyes. 
 1. Lucy for making the eyes work   (◔_◔)
