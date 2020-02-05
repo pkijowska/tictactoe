@@ -4,116 +4,85 @@
   <meta charset="utf-8">
   <title>Tic Tac Toe game</title>
   <link rel="stylesheet" href="css/tictactoe.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script src="js/jquery.js"></script>
   <script src="js/tictactoe.js"></script>
 </head>
-<body class="animated bounceInLeft">
-
-  <!-- <button id="btn" type="button">Click here for sound</button> -->
-  	<audio id="audio" src="bleep.mp3"></audio>
+  <body class="animated bounceInLeft">
+    <!-- <button id="btn" type="button">Click here for sound</button> -->
+    <audio id="audio" src="bleep.mp3"></audio>
     <audio id="audio1" src="cartoon.mp3"></audio>
     <audio id="audio2" src="blip1.mp3"></audio>
-      <audio id="audio3" src="win.mp3"></audio>
-      <audio id="audio0" src="start.mp3"></audio>
+    <audio id="audio3" src="win.mp3"></audio>
+    <audio id="audio0" src="start.mp3"></audio>
 
-<div class="container">
-  <div class="center-outer">
-  <div class="center-inner">
-
-  <div class="bubbles">
-  <h1>Tic Tac Toe</h1>
-</div>
-</div>
-</div>
-
-
-<!-- creating a table which will be the base for my tic tac toe game  -->
-<table>
-  <tr>
-    <td id="one" class="box border-top border-left"></td>
-    <td id="two" class="box border-top"></td>
-    <td id="three" class="box three border-top border-right"></td>
-  </tr>
-  <tr>
-    <td id="four" class="box border-left"></td>
-    <td id="five" class="box"></td>
-    <td id="six" class="box border-right"></td>
-  </tr>
-  <tr>
-    <td id="seven" class="box border-left border-bottom"> </td>
-    <td id="eight" class="box border-bottom"></td>
-    <td id="nine" class="box border-bottom border-right"></td>
-  </tr>
-</table>
-
-
-<!-- If player one wins, or player two wins, or there is a draw, show this ->  -->
-
-<div>
-<h2 class="text player2 animated pulse">Player two wins!</h2>
-</div>
-
-<div>
-<h2 class="text player1 animated pulse">Player one wins!!</h2>
-</div>
-<!-- <h2 class="player2">Player two wins!!</h2> -->
-<div>
-<h2 class="text draw animated heartbeat">Draw!</h2>
-</div>
-
-
-<!-- Button added:  -->
-
-<div id="button" class="container">
-  <a class="play-again" href="#">Play again</a>
-</div>
-</div>
-
-
-<!-- Calculating points for both players:  -->
-<div id="player1position">
-<h4>Player 1: </h4>
-<h4 id="teamplay1"></h4>
-</div>
-
-<div id="player2position">
-<h4> Player 2: </h4>
-<h4 id="teamplay2"></h4>
-</div>
-
-
-
-<!-- <div class="move-area">
-   <div class='.face1'> -->
-    <!-- <div class='eye'></div>
-    <div class='eye'></div>
-    <div class='mouth'></div>
-    </div> -->
-  <!-- </div> -->
-
-  <div style="width:500px; margin:auto; position:absolute; bottom: 0;">
-
-      <iframe src="start.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-
-      <audio src="start.mp3" type="audio/mpeg" autoplay>
-      </audio>
-
+  <div class="container">
+    <div class="center-outer">
+      <div class="center-inner">
+        <div class="bubbles">
+          <h1>Tic Tac Toe</h1>
+        </div>
+      </div>
     </div>
-
-<footer>
-  <a href="https://github.com/pkijowska/tictactoe"
-     aria-label="Check out the code"><svg width="90" height="90" viewBox="0 0 250 250"
-       style="fill:#151513; color:#fff; position: absolute; top: -6; border: 0; left: -6;" aria-hidden="true">
-       <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-       <path
-         d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-         fill="currentColor" style="transform-origin: 130px 106px;"></path>
-       <path
-         d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-         fill="currentColor"></path>
-     </svg>
-   </a>
-</footer>
-</body>
+  <!-- creating a table which will be the base for my tic tac toe game  -->
+  <table>
+    <tr>
+      <td id="one" class="box border-top border-left"></td>
+      <td id="two" class="box border-top"></td>
+      <td id="three" class="box three border-top border-right"></td>
+    </tr>
+    <tr>
+      <td id="four" class="box border-left"></td>
+      <td id="five" class="box"></td>
+      <td id="six" class="box border-right"></td>
+    </tr>
+    <tr>
+      <td id="seven" class="box border-left border-bottom"> </td>
+      <td id="eight" class="box border-bottom"></td>
+      <td id="nine" class="box border-bottom border-right"></td>
+    </tr>
+  </table>
+  <!-- If player one wins, or player two wins, or there is a draw, show this ->  -->
+  <div>
+    <h2 class="text player2 animated pulse">Player two wins!</h2>
+  </div>
+  <div>
+    <h2 class="text player1 animated pulse">Player one wins!!</h2>
+  </div>
+  <!-- <h2 class="player2">Player two wins!!</h2> -->
+  <div>
+    <h2 class="text draw animated heartbeat">Draw!</h2>
+  </div>
+  <!-- Button added:  -->
+  <div id="button" class="container">
+    <a class="play-again" href="#">Play again</a>
+  </div>
+  </div>
+  <!-- Calculating points for both players:  -->
+  <div id="player1position">
+    <h4>Player 1: </h4>
+    <h4 id="teamplay1"></h4>
+  </div>
+  <div id="player2position">
+    <h4> Player 2: </h4>
+    <h4 id="teamplay2"></h4>
+  </div>
+  <div style="width:500px; margin:auto; position:absolute; bottom: 0;">
+    <iframe src="start.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio src="start.mp3" type="audio/mpeg" autoplay>
+    </audio>
+  </div>
+    <footer>
+      <a href="https://github.com/pkijowska/tictactoe" aria-label="Check out the code">
+         <svg width="90" height="90" viewBox="0 0 250 250"
+           style="fill:#151513; color:#fff; position: absolute; top: -6; border: 0; left: -6;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                   fill="currentColor" style="transform-origin: 130px 106px;"></path>
+            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+             fill="currentColor"></path>
+         </svg>
+       </a>
+    </footer>
+  </body>
 </html>
